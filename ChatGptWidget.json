@@ -1,24 +1,24 @@
 {
-    "id": "com.poorna.volety.jnj.chatgptwidget",
-    "version": "1.0.3",
-    "name": "ChatGPT Widget",
+    "id": "com.poornavolety.jnj.chatgptwidget",
+    "version": "1.0.0",
+    "name": "ChatGPT Widget ",
     "description": "ChatGPT Custom Widget for SAP Analytics Cloud, To make your application more useful and effective.",
     "newInstancePrefix": "ChatGptWidget",
     "vendor": "Poorna Volety",
     "eula": "",
-    "license": "MIT",
+    "license": "JNJT",
     "icon": "https:\/\/raw.githubusercontent.com\/SAP-Custom-Widget\/ChatGptWidget\/main\/icon.png",
     "webcomponents": [
         {
             "kind": "main",
-            "tag": "com-poorna.volety-jnj-chatgptwidget",
+            "tag": "com-poornavolety-jnj-chatgptwidget",
             "url": "https:\/\/cdn.jsdelivr.net\/gh\/SAP-Custom-Widget\/ChatGptWidget@1.0.2\/ChatGptWidget.js",
             "integrity": "",
             "ignoreIntegrity": true
         },
         {
             "kind": "builder",
-            "tag": "com-rohitchouhan-sap-chatgptwidget-builder",
+            "tag": "com-poornavolety-jnj-chatgptwidget-builder",
             "url": "https:\/\/cdn.jsdelivr.net\/gh\/SAP-Custom-Widget\/ChatGptWidget@1.0.2\/ChatGptWidget_Builder.js",
             "integrity": "",
             "ignoreIntegrity": true
