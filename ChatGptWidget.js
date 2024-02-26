@@ -76,7 +76,7 @@
       generatedText.value = "";
       const {
         apiKey
-      } = this._props || "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";
+      } = this._props || "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";
       const {
         max_tokens
       } = this._props || 1024;
@@ -124,5 +124,5 @@
       this.initMain();
     }
   }
-  customElements.define("com-rohitchouhan-sap-chatgptwidget", Widget);
+  customElements.define("com-poornavolety-sap-chatgptwidget", Widget);
 })();
