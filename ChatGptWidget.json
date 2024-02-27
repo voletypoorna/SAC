@@ -12,14 +12,14 @@
         {
             "kind": "main",
             "tag": "com-poornavolety-jnj-chatgptwidget",
-            "url": "https://github.com/voletypoorna/SAC/blob/main/ChatGptWidget.js",
+            "url": "https://voletypoorna.github.io/SAC/ChatGptWidget.js",
             "integrity": "",
             "ignoreIntegrity": true
         },
         {
             "kind": "builder",
             "tag": "com-poornavolety-jnj-chatgptwidget-builder",
-            "url": "https://github.com/voletypoorna/SAC/blob/main/ChatGptWidget_Builder.js",
+            "url": "https://voletypoorna.github.io/SAC/ChatGptWidget_Builder.js",
             "integrity": "",
             "ignoreIntegrity": true
         }
