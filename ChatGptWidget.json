@@ -12,14 +12,14 @@
         {
             "kind": "main",
             "tag": "com-poornavolety-jnj-chatgptwidget",
-            "url": "https:\/\/cdn.jsdelivr.net\/gh\/SAP-Custom-Widget\/ChatGptWidget@1.0.2\/ChatGptWidget.js",
+            "url": "https://github.com/voletypoorna/SAC/blob/main/ChatGptWidget.js",
             "integrity": "",
             "ignoreIntegrity": true
         },
         {
             "kind": "builder",
             "tag": "com-poornavolety-jnj-chatgptwidget-builder",
-            "url": "https:\/\/cdn.jsdelivr.net\/gh\/SAP-Custom-Widget\/ChatGptWidget@1.0.2\/ChatGptWidget_Builder.js",
+            "url": "https://github.com/voletypoorna/SAC/blob/main/ChatGptWidget_Builder.js",
             "integrity": "",
             "ignoreIntegrity": true
         }
