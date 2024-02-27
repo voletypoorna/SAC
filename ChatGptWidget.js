@@ -124,5 +124,5 @@
       this.initMain();
     }
   }
-  customElements.define("com-poornavolety-sap-chatgptwidget", Widget);
+  customElements.define("com-poornavolety-jnj-chatgptwidget", Widget);
 })();
