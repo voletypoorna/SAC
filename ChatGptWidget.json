@@ -7,7 +7,7 @@
     "vendor": "Poorna Volety",
     "eula": "",
     "license": "JNJT",
-    "icon": "https:\/\/raw.githubusercontent.com\/SAP-Custom-Widget\/ChatGptWidget\/main\/icon.png",
+    "icon": "https://github.com/voletypoorna/SAC/blob/main/AI%20Logo%20for%20Demo.PNG",
     "webcomponents": [
         {
             "kind": "main",
