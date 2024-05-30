@@ -51,6 +51,8 @@
      <div>
   <center>
   <img src="https://1000logos.net/wp-content/uploads/2023/02/ChatGPT-Emblem.png" width="200"/>
+  <img src="https://www.bing.com/images/search?view=detailV2&ccid=91e%2b7lDw&id=9E10560473ADA2FFB00D6625EDFDE5FF34AA9A1E&thid=OIP.91e-7lDwJg78prnDUx4PgQHaHa&mediaurl=https%3a%2f%2f21050941.fs1.hubspotusercontent-na1.net%2fhubfs%2f21050941%2f0.Images%2fServiceIcons%2fPNG-HighRes%2fLogo_GenAI.png&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.f757beee50f0260efca6b9c3531e0f81%3frik%3dHpqqNP%252fl%252fe0lZg%26pid%3dImgRaw%26r%3d0&exph=4267&expw=4267&q=GenAI+Logo&simid=608037434226251981&FORM=IRPRST&ck=36EDCEFBDF046D0B74214EFB825EB034&selectedIndex=0&itb=1&idpp=overlayview&ajaxhist=0&ajaxserp=0"/>
+  
   <h1>(A.I)</h1></center>
     <div class="input-container">
       <input type="text" id="prompt-input" placeholder="Enter a prompt">
