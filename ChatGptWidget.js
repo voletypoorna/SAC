@@ -51,7 +51,7 @@
      <div>
   <center>
   <img src="https://1000logos.net/wp-content/uploads/2023/02/ChatGPT-Emblem.png" width="200"/>
-  <h1>ChatGPT</h1></center>
+  <h1>(A.I)</h1></center>
     <div class="input-container">
       <input type="text" id="prompt-input" placeholder="Enter a prompt">
       <button id="generate-button">Generate Text</button>
