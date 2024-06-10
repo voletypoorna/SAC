@@ -53,7 +53,7 @@
   
   <img src="https://github.com/voletypoorna/SAC/AI%20Logo%20for%20Demo.PNG"/>
   
-  <h1>(A.I)</h1></center>
+  <h1>(GenAI)</h1></center>
     <div class="input-container">
       <input type="text" id="prompt-input" placeholder="Enter a prompt">
       <button id="generate-button">Generate Text</button>
