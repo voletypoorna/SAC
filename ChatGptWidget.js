@@ -51,7 +51,7 @@
      <div>
   <center>
   
-  <img src="https://github.com/voletypoorna/SAC/blob/main/AI%20Logo%20for%20Demo.PNG"/>
+  <img src="https://github.com/voletypoorna/SAC/AI%20Logo%20for%20Demo.PNG"/>
   
   <h1>(A.I)</h1></center>
     <div class="input-container">
