@@ -59,6 +59,8 @@
     <textarea id="generated-text" rows="10" cols="50" readonly></ textarea>
   </div>
     `;
+var ENDPOINT = "https://genaiapimna.jnj.com/openai-completion/openai/deployments/gpt-35-turbo-0301/completions?api-version=2023-03-15-preview"
+
   class Widget extends HTMLElement {
     constructor() {
       super();
@@ -87,17 +89,17 @@
         generatedText.value = "Finding result...";
         const prompt = promptInput.value;
         const response = await fetch("https://genaiapimna.jnj.com/openai-completion/openai/deployments/gpt-35-turbo-0301/completions?api-version=2023-03-15-preview", {
-          method: "POST",
+var request = require('request');
+var options = {
+           'method': 'POST',
+           'url': ENDPOINT,
           headers: {
-            "Content-Type": "application/json",
-            "Authorization": "Bearer " + apiKey
-          },
+            'api-key': apikey,
+            'Content-Type': "application/json",
+            },
           body: JSON.stringify({
-            "model": "gpt-35-turbo-0301",
             "prompt": prompt,
-            "max_tokens": parseInt(max_tokens),
-            "n": 1,
-            "temperature": 0.5,
+            "temperature": 0.8,
             "top_p": 1,
             "frequency_penalty": 0,
             "presence_penalty": 0,
