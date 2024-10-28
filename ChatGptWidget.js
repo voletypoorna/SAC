@@ -80,7 +80,7 @@
       generatedText.value = "";
       const {
         apiKey
-      } = this._props || "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";
+      } = this._props || " ";
       const {
         max_tokens
       } = this._props || 1024;
@@ -90,7 +90,7 @@
         const generatedText = this.shadowRoot.getElementById("generated-text");
         generatedText.value = "Finding result...";
         const prompt = promptInput.value;
-
+const response = await fetch("https://genaiapimna.jnj.com/openai-completion/openai/deployments/gpt-35-turbo-0301/completions?api-version=2023-03-15-preview", {
 var request = require('request');
 var options = {
   'method': 'POST',
@@ -100,13 +100,7 @@ var options = {
     'Content-Type': 'application/json'
   },
 	      
-//        const response = await fetch("https://genaiapimna.jnj.com/openai-completion/openai/deployments/gpt-35-turbo-0301/completions?api-version=2023-03-15-preview", {
-//          method: "POST",
-//          headers: {
-//            "Content-Type": "application/json",
-//            "Authorization": "Bearer " + apiKey
-//          },
-          body: JSON.stringify({
+   body: JSON.stringify({
             "prompt": prompt,
             "max_tokens": parseInt(max_tokens),
             "n": 1,
