@@ -76,7 +76,7 @@
       generatedText.value = "";
       const {
         apiKey
-      } = this._props || "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";
+      } = this._props || " ";
       const {
         max_tokens
       } = this._props || 1024;
@@ -129,5 +129,5 @@
       this.initMain();
     }
   }
-  customElements.define("com-poornavolety-jnj-GenAIwidget", Widget);
+  customElements.define("com-poornavolety-jnj-OpenAIwidget", Widget);
 })();
