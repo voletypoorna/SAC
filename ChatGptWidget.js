@@ -1,231 +1,3 @@
-***********************JSON******************************************
-{
-    "id": "com.poornavolety.jnj.GenAIwidget",
-    "version": "1.0.0",
-    "name": "GenAI Widget ",
-    "description": "GenAI Custom Widget for SAP Analytics Cloud, To make your application more useful and effective.",
-    "newInstancePrefix": "GenAIWidget",
-    "vendor": "Poorna Volety",
-    "eula": "",
-    "license": "JNJT",
-    "icon": "https:\/\/raw.githubusercontent.com\/SAP-Custom-Widget\/ChatGPTWidget\/main\/icon.png",
-    "webcomponents": [
-        {
-            "kind": "main",
-            "tag": "com-poornavolety-jnj-GenAIwidget",
-            "url": "https://voletypoorna.github.io/SAC/GenAIWidget.js",
-            "integrity": "",
-            "ignoreIntegrity": true
-        },
-        {
-            "kind": "builder",
-            "tag": "com-poornavolety-jnj-GenAIwidget-builder",
-            "url": "https://voletypoorna.github.io/SAC/GenAIWidget_Builder.js",
-            "integrity": "",
-            "ignoreIntegrity": true
-        }
-    ],
-    "properties": {
-        "apiKey": {
-            "description": "Api Key of GenAI",
-            "type": "string",
-            "default": ""
-        },
-        "max_tokens": {
-            "description": "Result Max Length",
-            "type": "integer",
-            "default": 1024
-        }
-    },
-    "methods": {
-        "setApiKey": {
-            "description": "Set Api Key of GenAI",
-            "parameters": [
-                {
-                    "name": "apiKey",
-                    "type": "string",
-                    "description": "Api Key of GenAI"
-                }
-            ],
-            "body": "this.apiKey = apiKey;"
-        },
-        "getApiKey": {
-            "returnType": "string",
-            "description": "Return Api Key of GenAI",
-            "body": "return this.apiKey;"
-        },
-        "setMax_tokens": {
-            "description": "Set Result Max Length",
-            "parameters": [
-                {
-                    "name": "max_tokens",
-                    "type": "integer",
-                    "description": "Result Max Length"
-                }
-            ],
-            "body": "this.max_tokens = max_tokens;"
-        },
-        "getMax_tokens": {
-            "returnType": "integer",
-            "description": "Return Result Max Length",
-            "body": "return this.max_tokens;"
-        }
-    },
-    "events": {
-        "onClick": {
-            "description": "User Clicked."
-        }
-    }
-}
-
-
-_________________________WIDGET_BUILDER__________________
-
-(function () {
-   let template = document.createElement("template");
-   template.innerHTML = `
-<br>
-<style>
-    #form {
-        font-family: Arial, sans-serif;
-        width: 400px;
-        margin: 0 auto;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 10px;
-    }
-
-    td {
-        padding: 1px;
-        text-align: left;
-        font-size: 13px;
-    }
-
-    input {
-        width: 100%;
-        padding: 10px;
-        border: 2px solid #ccc;
-        border-radius: 5px;
-        font-size: 13px;
-        box-sizing: border-box;
-        margin-bottom: 10px;
-    }
-
-
-    input[type="color"] {
-	-webkit-appearance: none;
-	border: none;
-	width: 32px;
-	height: 32px;
-}
-input[type="color"]::-webkit-color-swatch-wrapper {
-	padding: 0;
-}
-input[type="color"]::-webkit-color-swatch {
-	border: none;
-}
-
-
-    select {
-        width: 100%;
-        padding: 10px;
-        border: 2px solid #ccc;
-        border-radius: 5px;
-        font-size: 13px;
-        box-sizing: border-box;
-        margin-bottom: 10px;
-    }
-
-    input[type="submit"] {
-        background-color: #487cac;
-        color: white;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        font-size: 14px;
-        cursor: pointer;
-        width: 100%;
-    }
-
-    #label {
-        width: 140px;
-    }
-</style>
-<form id="form">
-    <table>
-        <tr>
-    <td>
-    <p>Api Key of GenAI</p>
-    <input id="builder_apiKey" type="text" placeholder="Enter Api Key of GenAI">
-    </td>
-    </tr>
-    <tr>
-    <td>
-    <p>Result Max Length</p>
-    <input id="builder_max_tokens" type="number" placeholder="Enter Result Max Length">
-    </td>
-    </tr>
-    
-    </table>
-    <input value="Update Settings" type="submit">
-    <br>
-    <p>Developed by <a target="_blank" href="https://www.linkedin.com/in/poornavolety/">Poorna Volety</a></p>
-</form>
-`;
-   class GenAIWidgetBuilderPanel extends HTMLElement {
-      constructor() {
-         super();
-         this._shadowRoot = this.attachShadow({
-            mode: "open"
-         });
-         this._shadowRoot.appendChild(template.content.cloneNode(true));
-         this._shadowRoot
-            .getElementById("form")
-            .addEventListener("submit", this._submit.bind(this));
-      }
-      _submit(e) {
-         e.preventDefault();
-         this.dispatchEvent(
-            new CustomEvent("propertiesChanged", {
-               detail: {
-                  properties: {
-                     apiKey: this.apiKey,
-                     max_tokens: this.max_tokens
-                  },
-               },
-            })
-         );
-      }
-
-      set apiKey(_apiKey) {
-         this._shadowRoot.getElementById("builder_apiKey").value = _apiKey;
-      }
-      get apiKey() {
-         return this._shadowRoot.getElementById("builder_apiKey").value;
-      }
-
-      set max_tokens(_max_tokens) {
-         this._shadowRoot.getElementById("builder_max_tokens").value = _max_tokens;
-      }
-      get max_tokens() {
-         return this._shadowRoot.getElementById("builder_max_tokens").value;
-      }
-
-   }
-   customElements.define("com-poornavolety-jnj-GenAIwidget-builder",
-      GenAIWidgetBuilderPanel
-   );
-})();
-
-
-*******************WIDGET********************
 
 (function () {
   let template = document.createElement("template");
@@ -288,6 +60,9 @@ input[type="color"]::-webkit-color-swatch {
     <textarea id="generated-text" rows="10" cols="50" readonly></ textarea>
   </div>
     `;
+
+	var ENDPOINT = "https://genaiapimna.jnj.com/openai-completion/openai/deployments/gpt-35-turbo-0301/completions?api-version=2023-03-15-preview"
+	var apikey = " "
   class Widget extends HTMLElement {
     constructor() {
       super();
@@ -315,18 +90,27 @@ input[type="color"]::-webkit-color-swatch {
         const generatedText = this.shadowRoot.getElementById("generated-text");
         generatedText.value = "Finding result...";
         const prompt = promptInput.value;
-        const response = await fetch("https://genaiapimna.jnj.com/openai-completion/openai/deployments/gpt-35-turbo-0301/completions?api-version=2023-03-15-preview", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Authorization": "Bearer " + apiKey
-          },
+
+var request = require('request');
+var options = {
+  'method': 'POST',
+  'url': ENDPOINT,
+  'headers': {
+    'api-key': apikey,
+    'Content-Type': 'application/json'
+  },
+	      
+//        const response = await fetch("https://genaiapimna.jnj.com/openai-completion/openai/deployments/gpt-35-turbo-0301/completions?api-version=2023-03-15-preview", {
+//          method: "POST",
+//          headers: {
+//            "Content-Type": "application/json",
+//            "Authorization": "Bearer " + apiKey
+//          },
           body: JSON.stringify({
-            "model": "gpt-35-turbo-0301",
             "prompt": prompt,
             "max_tokens": parseInt(max_tokens),
             "n": 1,
-            "temperature": 0.5,
+            "temperature": 0.8,
             "top_p": 1,
             "frequency_penalty": 0,
             "presence_penalty": 0,
@@ -358,5 +142,5 @@ input[type="color"]::-webkit-color-swatch {
       this.initMain();
     }
   }
-  customElements.define("com-poornavolety-jnj-GenAIwidget", Widget);
+  customElements.define("com-poornavolety-jnj-chatgptwidget", Widget);
 })();
