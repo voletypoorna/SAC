@@ -100,7 +100,7 @@ var options = {
     'Content-Type': 'application/json'
   },
 	      
-   body: JSON.stringify({
+   'body': JSON.stringify({
             "prompt": prompt,
             "max_tokens": parseInt(max_tokens),
             "n": 1,
