@@ -89,7 +89,6 @@
         const generatedText = this.shadowRoot.getElementById("generated-text");
         generatedText.value = "Finding result...";
         const prompt = promptInput.value;
-        const response = await fetch("https://genaiapimna.jnj.com/openai-completion/openai/deployments/gpt-35-turbo-0301/completions?api-version=2023-03-15-preview", {
 var request = require('request');
 var options = {
            'method': 'POST',
