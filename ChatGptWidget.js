@@ -59,7 +59,8 @@
     <textarea id="generated-text" rows="10" cols="50" readonly></ textarea>
   </div>
     `;
-var ENDPOINT = "https://genaiapimna.jnj.com/openai-completion/openai/deployments/gpt-35-turbo-0301/completions?api-version=2023-03-15-preview"
+
+  var ENDPOINT = "https://genaiapimna.jnj.com/openai-completion/openai/deployments/gpt-35-turbo-0301/completions?api-version=2023-03-15-preview"
 
   class Widget extends HTMLElement {
     constructor() {
