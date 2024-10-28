@@ -129,5 +129,5 @@
       this.initMain();
     }
   }
-  customElements.define("com-poornavolety-jnj-GenAIwidget", Widget);
+  customElements.define("com-poornavolety-jnj-chatgptwidget", Widget);
 })();
