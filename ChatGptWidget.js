@@ -50,10 +50,8 @@
       </style>
      <div>
   <center>
-  
-  <img src="https://github.com/voletypoorna/SAC/AI%20Logo%20for%20Demo.PNG"/>
-  
-  <h1>Ask GenAI</h1></center>
+  <img src="https://1000logos.net/wp-content/uploads/2023/02/ChatGPT-Emblem.png" width="200"/>
+  <h1>GenAI</h1></center>
     <div class="input-container">
       <input type="text" id="prompt-input" placeholder="Enter a prompt">
       <button id="generate-button">Generate Text</button>
@@ -88,18 +86,23 @@
         const generatedText = this.shadowRoot.getElementById("generated-text");
         generatedText.value = "Finding result...";
         const prompt = promptInput.value;
-        const response = await fetch("https://api.openai.com/v1/completions", {
+        const response = await fetch("https://genaiapimna.jnj.com/openai-completion/openai/deployments/gpt-35-turbo-0301/completions?api-version=2023-03-15-preview", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
             "Authorization": "Bearer " + apiKey
           },
           body: JSON.stringify({
-            "model": "gpt-3.5-turbo-instruct",
+            "model": "gpt-35-turbo-0301",
             "prompt": prompt,
             "max_tokens": parseInt(max_tokens),
             "n": 1,
-            "temperature": 0.5
+            "temperature": 0.5,
+            "top_p": 1,
+            "frequency_penalty": 0,
+            "presence_penalty": 0,
+            "max_tokens": 60,
+            "stop": null
           })
         });
 
@@ -111,7 +114,7 @@
           generatedText.value = generatedTextValue.replace(/^\n+/, '');
         } else {
           const error = await response.json();
-          alert("OpenAI Response: " + error.error.message);
+          alert("GenAI Response: " + error.error.message);
           generatedText.value = "";
         }
       });
@@ -126,5 +129,5 @@
       this.initMain();
     }
   }
-  customElements.define("com-poornavolety-jnj-chatgptwidget", Widget);
+  customElements.define("com-poornavolety-jnj-GenAIwidget", Widget);
 })();
