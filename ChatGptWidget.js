@@ -51,7 +51,7 @@
      <div>
   <center>
   <img src="https://1000logos.net/wp-content/uploads/2023/02/ChatGPT-Emblem.png" width="200"/>
-  <h1>GenAI</h1></center>
+  <h1>&J& GenAI</h1></center>
     <div class="input-container">
       <input type="text" id="prompt-input" placeholder="Enter a prompt">
       <button id="generate-button">Generate Text</button>
@@ -59,9 +59,6 @@
     <textarea id="generated-text" rows="10" cols="50" readonly></ textarea>
   </div>
     `;
-
-  var ENDPOINT = "https://genaiapimna.jnj.com/openai-completion/openai/deployments/gpt-35-turbo-0301/completions?api-version=2023-03-15-preview"
-
   class Widget extends HTMLElement {
     constructor() {
       super();
@@ -79,7 +76,7 @@
       generatedText.value = "";
       const {
         apiKey
-      } = this._props || " ";
+      } = this._props || "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";
       const {
         max_tokens
       } = this._props || 1024;
@@ -89,17 +86,18 @@
         const generatedText = this.shadowRoot.getElementById("generated-text");
         generatedText.value = "Finding result...";
         const prompt = promptInput.value;
-var request = require('request');
-var options = {
-           'method': 'POST',
-           'url': ENDPOINT,
+        const response = await fetch("https://genaiapimna.jnj.com/openai-completion/openai/deployments/gpt-35-turbo-0301/completions?api-version=2023-03-15-preview", 
+                                     {};
+          method: "POST",
           headers: {
-            'api-key': apikey,
-            'Content-Type': "application/json",
-            },
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + apiKey
+          },
           body: JSON.stringify({
             "prompt": prompt,
-            "temperature": 0.8,
+            "max_tokens": parseInt(max_tokens),
+            "n": 1,
+            "temperature": 0.5,
             "top_p": 1,
             "frequency_penalty": 0,
             "presence_penalty": 0,
@@ -131,5 +129,5 @@ var options = {
       this.initMain();
     }
   }
-  customElements.define("com-poornavolety-jnj-chatgptwidget", Widget);
+  customElements.define("com-poornavolety-jnj-GenAIwidget", Widget);
 })();
